@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Preethikasan V | Full Stack Developer</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <h2 class="logo">My Portfolio</h2>
+
+        <ul class="nav-links">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="section">
+
+        <h1>Hello, I'm</h1>
+
+        <h2>Preethikasan V</h2>
+
+        <h3>Full Stack Developer</h3>
+
+        <p>
+            Welcome to my personal portfolio website.
+            I build responsive and dynamic web applications
+            using HTML, CSS, JavaScript, Node.js, Express.js,
+            and MongoDB.
+        </p>
+
+        <!-- Download Resume -->
+
+        <a
+            href="resume/Preethikasan_Resume.pdf"
+            download
+            class="resume-btn"
+        >
+            Download Resume
+        </a>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+        <h1>About Me</h1>
+
+        <p>
+            I am a passionate Full Stack Developer with an interest
+            in creating responsive, user-friendly, and modern web
+            applications.
+
+            I enjoy working with both frontend and backend technologies
+            and building complete web applications.
+
+            This portfolio website demonstrates the integration of
+            HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB.
+        </p>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills" class="section">
+
+        <h1>Skills</h1>
+
+        <div class="skills">
+
+            <div class="skill">
+                HTML
+            </div>
+
+            <div class="skill">
+                CSS
+            </div>
+
+            <div class="skill">
+                JavaScript
+            </div>
+
+            <div class="skill">
+                Node.js
+            </div>
+
+            <div class="skill">
+                Express.js
+            </div>
+
+            <div class="skill">
+                MongoDB
+            </div>
+
+            <div class="skill">
+                Git
+            </div>
+
+            <div class="skill">
+                GitHub
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects" class="section">
+
+        <h1>My Projects</h1>
+
+        <!--
+            Projects will be loaded from MongoDB
+            using frontend/script.js
+        -->
+
+        <div id="project-list">
+
+            <p>
+                Loading projects...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section">
+
+        <h1>Contact Me</h1>
+
+        <form id="contact-form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Preethikasan V | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
