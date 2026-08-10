@@ -9,19 +9,20 @@ const app = express();
 
 console.log("MY PORTFOLIO BACKEND CODE IS RUNNING");
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Routes
-const projectRoutes = require("./routes/projectRoutes");
-app.use("/projects", projectRoutes);
-
-// Test route
+// ==============================
+// TEST ROUTE
+// ==============================
 app.get("/", (req, res) => {
   res.status(200).send("Portfolio Backend Running");
 });
 
-// Health check
+// ==============================
+// HEALTH CHECK
+// ==============================
 app.get("/health", (req, res) => {
   res.status(200).json({
     status: "OK",
@@ -29,8 +30,21 @@ app.get("/health", (req, res) => {
   });
 });
 
+// ==============================
+// PROJECT ROUTES
+// ==============================
+const projectRoutes = require("./routes/projectRoutes");
+
+app.use("/projects", projectRoutes);
+
+// ==============================
+// PORT
+// ==============================
 const PORT = process.env.PORT || 5000;
 
+// ==============================
+// MONGODB + SERVER
+// ==============================
 mongoose
   .connect(process.env.MONGO_URI, {
     serverSelectionTimeoutMS: 10000
