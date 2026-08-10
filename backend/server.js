@@ -10,12 +10,21 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Routes
 const projectRoutes = require("./routes/projectRoutes");
-
 app.use("/projects", projectRoutes);
 
+// Test route
 app.get("/", (req, res) => {
-    res.send("Portfolio Backend Running");
+    res.status(200).send("Portfolio Backend Running");
+});
+
+// Health check
+app.get("/health", (req, res) => {
+    res.status(200).json({
+        status: "OK",
+        message: "Backend is running"
+    });
 });
 
 const PORT = process.env.PORT || 5000;
@@ -27,7 +36,7 @@ mongoose
     .then(() => {
         console.log("MongoDB Connected");
 
-        app.listen(PORT, () => {
+        app.listen(PORT, "0.0.0.0", () => {
             console.log(`Server running on port ${PORT}`);
         });
     })
